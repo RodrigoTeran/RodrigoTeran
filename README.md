@@ -15,7 +15,7 @@
 </p>
 
 <p style="margin-bottom: 20px;" align="center">
-    <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <a href="https://github.com/ryo-ma/github-profile-trophy" target="_blank" rel="noreferrer">
         <img
             style="display:block;"
             src="https://github-profile-trophy.vercel.app/?username=rodrigoteran&theme=nord&rank=-C,-B&margin-w=35"
@@ -33,25 +33,25 @@
 
 ## 🚀 Open source projects:
 ### - **Syntactically Awesome React App**
-<a href="https://github.com/RodrigoTeran/syntactically-awesome-react-app">
+<a href="https://github.com/RodrigoTeran/syntactically-awesome-react-app" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/RodrigoTeran/syntactically-awesome-react-app/main/docs/assets/logo.png" width="100px"/>
 </a> &nbsp;&nbsp;&nbsp;&nbsp;
-<a href="https://www.npmjs.com/package/create-sara-project">
+<a href="https://www.npmjs.com/package/create-sara-project" target="_blank" rel="noreferrer">
     <img src="https://upload.wikimedia.org/wikipedia/commons/d/db/Npm-logo.svg" width="175px"/>
 </a>
 
 
 ## 📊 Stats:
 <p align="center">
-    <a style="display: flex; gap: 30px; justify-content:center; flex-wrap: wrap;" href="https://github.com/RodrigoTeran">
-        <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=RodrigoTeran&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <a style="display: flex; gap: 30px; justify-content:center; flex-wrap: wrap;" href="https://github.com/RodrigoTeran" target="_blank" rel="noreferrer">
+        <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api?username=RodrigoTeran&show_icons=true&theme=algolia&include_all_commits=true&count_private=true"/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <img height="180em" src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=RodrigoTeran&layout=compact&langs_count=10&theme=algolia"/>
     </a>
 </p>
 
 ## 🔗 Connect with me:
 <p align="left">
-<a href="https://www.linkedin.com/in/rodrigoteranhdz" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rodrigo terán hernández" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/rodrigoteranhdz" target="_blank" rel="noreferrer"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rodrigo terán hernández" height="30" width="40" /></a>
 </p>
 
 ## 🛠️ Languages and Tools:
