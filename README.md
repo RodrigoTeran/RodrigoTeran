@@ -32,7 +32,9 @@
 📫 How to reach me **https://www.rodrigoteran.dev**</br>
 
 ## 🚀 Open source projects:
-### - **Syntactically Awesome React App**
+
+### - **Syntactically Awesome React App** <img src="https://img.shields.io/npm/v/create-sara-project?color=ff69b4" alt="version" /> <img src="https://img.shields.io/npm/dw/create-sara-project?color=05BB17" alt="downloads" /> <img src="https://img.shields.io/github/issues/RodrigoTeran/syntactically-awesome-react-app?color=18C6D1" alt="issues" /> <img src="https://img.shields.io/npm/l/create-sara-project?color=EF821E" alt="license" />
+
 <a href="https://github.com/RodrigoTeran/syntactically-awesome-react-app" target="_blank" rel="noreferrer">
     <img src="https://raw.githubusercontent.com/RodrigoTeran/syntactically-awesome-react-app/main/docs/assets/logo.png" width="100px"/>
 </a> &nbsp;&nbsp;&nbsp;&nbsp;
