@@ -5,7 +5,7 @@
         width="100%"
         alt="Coding"
         style="display:block; max-width: 830px;"
-        src="https://media-exp1.licdn.com/dms/image/C5616AQHZkymfAoSFbQ/profile-displaybackgroundimage-shrink_350_1400/0/1660526370291?e=1675900800&v=beta&t=_1V64jhnhAzlItWNnOx7dhU7jRBwHhsCrloodrxjyjM" />
+        src="./assets/bg.png" />
 </p>
 
 <p align="center">
