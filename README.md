@@ -18,7 +18,7 @@
     <a href="https://github.com/ryo-ma/github-profile-trophy" target="_blank" rel="noreferrer">
         <img
             style="display:block;"
-            src="https://github-profile-trophy.vercel.app/?username=rodrigoteran&theme=nord&rank=-C,-B&margin-w=35"
+            src="https://github-profile-trophy.vercel.app/?username=rodrigoteran&theme=nord&margin-w=35"
             alt="rodrigoteran" />
     </a>
 </p>
