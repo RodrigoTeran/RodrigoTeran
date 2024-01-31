@@ -24,6 +24,7 @@
 </p>
 
 ## ✳️ About me:
+📚 Incoming SWE Intern at **Google** 2024 <span><img src="./assets/google_logo.png" width="12.5px"/></span> </br>
 📚 Incoming SWE Intern at **Microsoft** 2024 <span><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" width="12.5px"/></span> </br>
 📚 Intern at **Microsoft** 2023 <span><img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" width="12.5px"/></span> </br>
 📚 Intern at **Meta (Facebook)** 2022 <span><img src="https://seeklogo.com/images/M/meta-icon-new-facebook-2021-logo-83520C311D-seeklogo.com.png" width="12.5px"/></span> </br>
