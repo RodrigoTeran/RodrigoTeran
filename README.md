@@ -5,7 +5,11 @@
         width="100%"
         alt="Coding"
         style="display:block; max-width: 830px;"
-        src="./assets/bg.png" />
+        src="./assets/bg.jpeg" />
+</p>
+
+<p style="margin-bottom: 20px;" align="center">
+<img src="./assets/yt_logo.png" width="12.5px"/> <a href="https://www.youtube.com/@rodrigoteranhdz">YouTube Channel</a>
 </p>
 
 <p align="center">
