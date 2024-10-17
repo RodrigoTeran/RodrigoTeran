@@ -31,7 +31,7 @@
 🔭 Software Engineer at **Evolutel**</br>
 🌱 I’m currently learning **Cloud technologies**</br>
 🤝 Ask me about **Web development**</br>
-<img src="./assets/yt_logo.png" width="12.5px"/> Youtube Channel **https://www.youtube.com/@rodrigoteranhdz**</br>
+<img src="./assets/yt_logo.png" width="12.5px"/> YouTube Channel **https://www.youtube.com/@rodrigoteranhdz**</br>
 📫 How to reach me **https://www.rodrigoteran.dev**</br>
 
 ## 🚀 Open source projects:
