@@ -1,0 +1,143 @@
+ISP
+
+
+en
+config t
+
+hostname ISP
+
+no ip domain-lookup
+
+service password-encryption
+
+enable secret class
+
+banner motd #Unauthorized access is strictly prohibited#
+
+line con 0
+password cisco
+login
+logging synchronous
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+
+int s0/1/0
+desc Enlace con WEST
+ip address 10.1.1.2 255.255.255.252
+no shut
+
+int s0/1/1
+desc Enlace con EAST
+ip address 10.2.2.2 255.255.255.252
+clock rate 64000
+no shut
+
+
+
+
+ROUTER WEST
+
+
+en
+config t
+
+hostname WEST
+
+no ip domain-lookup
+
+service password-encryption
+
+enable secret class
+
+banner motd #Unauthorized access is strictly prohibited#
+
+line con 0
+password cisco
+login
+logging synchronous
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+
+interface g0/0/1
+desc Enlace a red azul
+ip address 172.16.1.1 255.255.255.0
+no shut
+
+interface s0/1/0
+desc Enlace con ISP
+ip address 10.1.1.1 255.255.255.252
+clock rate 64000
+no shut
+
+int tunnel 0
+tunnel source s0/1/0
+tunnel destination 10.2.2.1
+ip address 172.16.12.1 255.255.255.252
+
+ip route 0.0.0.0 0.0.0.0 10.1.1.2
+
+router ospf 100
+network 172.16.1.0 0.0.0.255 area 0
+network 172.16.12.0 0.0.0.3 area 0
+passive-interface g0/0/1
+passive-interface s0/1/0
+
+
+
+
+ROUTER EAST
+
+en
+config t
+
+hostname EAST
+
+no ip domain-lookup
+
+service password-encryption
+
+enable secret class
+
+banner motd #Unauthorized access is strictly prohibited#
+
+line con 0
+password cisco
+login
+logging synchronous
+exit
+
+line vty 0 4
+password cisco
+login
+exit
+
+interface g0/0/1
+desc Enlace con red verde
+ip address 172.16.2.1 255.255.255.0
+no shut
+
+interface s0/1/1
+desc Enlace con ISP
+ip address 10.2.2.1 255.255.255.252
+no shut
+
+int tunnel 0
+tunnel source s0/1/1
+tunnel destination 10.1.1.1
+ip address 172.16.12.2 255.255.255.252
+
+ip route 0.0.0.0 0.0.0.0 10.2.2.2
+
+router ospf 100
+network 172.16.2.0 0.0.0.255 area 0
+network 172.16.12.0 0.0.0.3 area 0
+passive-interface g0/0/1
+passive-interface s0/1/1
