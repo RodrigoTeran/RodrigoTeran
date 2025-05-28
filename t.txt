@@ -1,6 +1,65 @@
-ISP
+!-------------------------------------------------------------
+! GATEWAY
+!-------------------------------------------------------------
+
+en
+config t
+
+hostname gateway
+
+no ip domain-lookup
+
+service password-encryption
+
+enable secret class
+
+banner motd #Unauthorized access is strictly prohibited. #
+
+line con 0
+password cisco
+login
+logging synchronous
+
+line vty 0 4
+password cisco
+login
+
+int g0/0/1
+ip address 192.168.1.1 255.255.255.0
+ip nat inside
+no shut
+
+int s0/1/1
+ip address 209.165.201.18 255.255.255.252
+ip nat outside
+no shut
+
+ip route 0.0.0.0 0.0.0.0 209.165.201.17
+
+! --------- NAT ESTÁTICO
+ip nat inside source static 192.168.1.20 209.165.200.224
+
+! --------- NAT PURO
+access-list 1 permit 192.168.1.0 0.0.0.255
+
+ip nat pool public_access 209.165.200.225 209.165.200.255 netmask 255.255.255.224
+ip nat inside source list 1 pool public_access
+
+! --------- PAT
+access-list 1 permit 192.168.1.0 0.0.0.255
+
+ip nat pool public_access 209.165.200.225 209.165.200.255 netmask 255.255.255.224
+ip nat inside source list 1 pool public_access overload
 
 
+! --------
+clear ip nat translation
+show ip nat translations
+
+
+!-------------------------------------------------------------
+! ISP
+!-------------------------------------------------------------
 en
 config t
 
@@ -12,132 +71,24 @@ service password-encryption
 
 enable secret class
 
-banner motd #Unauthorized access is strictly prohibited#
+banner motd #Unauthorized access is strictly prohibited. #
 
 line con 0
 password cisco
 login
 logging synchronous
-exit
 
 line vty 0 4
 password cisco
 login
-exit
 
 int s0/1/0
-desc Enlace con WEST
-ip address 10.1.1.2 255.255.255.252
-no shut
-
-int s0/1/1
-desc Enlace con EAST
-ip address 10.2.2.2 255.255.255.252
+ip address 209.165.201.17 255.255.255.252
 clock rate 64000
 no shut
 
+int Lo0
+ip address 192.31.7.1 255.255.255.255
 
 
-
-ROUTER WEST
-
-
-en
-config t
-
-hostname WEST
-
-no ip domain-lookup
-
-service password-encryption
-
-enable secret class
-
-banner motd #Unauthorized access is strictly prohibited#
-
-line con 0
-password cisco
-login
-logging synchronous
-exit
-
-line vty 0 4
-password cisco
-login
-exit
-
-interface g0/0/1
-desc Enlace a red azul
-ip address 172.16.1.1 255.255.255.0
-no shut
-
-interface s0/1/0
-desc Enlace con ISP
-ip address 10.1.1.1 255.255.255.252
-clock rate 64000
-no shut
-
-int tunnel 0
-tunnel source s0/1/0
-tunnel destination 10.2.2.1
-ip address 172.16.12.1 255.255.255.252
-
-ip route 0.0.0.0 0.0.0.0 10.1.1.2
-
-router ospf 100
-network 172.16.1.0 0.0.0.255 area 0
-network 172.16.12.0 0.0.0.3 area 0
-passive-interface g0/0/1
-passive-interface s0/1/0
-
-
-
-
-ROUTER EAST
-
-en
-config t
-
-hostname EAST
-
-no ip domain-lookup
-
-service password-encryption
-
-enable secret class
-
-banner motd #Unauthorized access is strictly prohibited#
-
-line con 0
-password cisco
-login
-logging synchronous
-exit
-
-line vty 0 4
-password cisco
-login
-exit
-
-interface g0/0/1
-desc Enlace con red verde
-ip address 172.16.2.1 255.255.255.0
-no shut
-
-interface s0/1/1
-desc Enlace con ISP
-ip address 10.2.2.1 255.255.255.252
-no shut
-
-int tunnel 0
-tunnel source s0/1/1
-tunnel destination 10.1.1.1
-ip address 172.16.12.2 255.255.255.252
-
-ip route 0.0.0.0 0.0.0.0 10.2.2.2
-
-router ospf 100
-network 172.16.2.0 0.0.0.255 area 0
-network 172.16.12.0 0.0.0.3 area 0
-passive-interface g0/0/1
-passive-interface s0/1/1
+ip route 209.165.200.224 255.255.255.224 209.165.201.18
